@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+<title>Grip Data AI — Thailand · brief for Pat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0d10; --panel:#14171c; --panel2:#1a1e25; --line:#262b33;
+  --ink:#f2f4f7; --mute:#9aa3b0; --dim:#6b7480;
+  --acc:#ffb547; --acc2:#5ee1a8; --warn:#ff6b6b; --blue:#6aa9ff;
+  --r:18px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Inter,system-ui,-apple-system,sans-serif;padding-bottom:max(48px,env(safe-area-inset-bottom))}
+h1,h2,h3{font-family:"Inter Tight",Inter,system-ui,sans-serif;letter-spacing:-.02em;margin:0}
+a{color:var(--blue)}
+.wrap{max-width:640px;margin:0 auto;padding:0 18px}
+
+/* top */
+.top{padding:calc(20px + env(safe-area-inset-top)) 0 22px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,#0f1216,var(--bg))}
+.kicker{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--acc)}
+.top h1{font-size:clamp(28px,7.5vw,40px);font-weight:800;line-height:1.05;margin:10px 0 8px}
+.top p{margin:0;color:var(--mute);font-size:15px}
+.meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.chip{font-size:12px;font-weight:600;padding:6px 10px;border-radius:999px;background:var(--panel2);border:1px solid var(--line);color:var(--mute)}
+.chip b{color:var(--ink);font-weight:600}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:5;background:rgba(11,13,16,.88);backdrop-filter:saturate(160%) blur(12px);-webkit-backdrop-filter:saturate(160%) blur(12px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;gap:6px;overflow-x:auto;padding:10px 18px;scrollbar-width:none}
+.nav .wrap::-webkit-scrollbar{display:none}
+.nav a{flex:0 0 auto;font-size:13px;font-weight:600;color:var(--mute);text-decoration:none;padding:7px 11px;border-radius:999px;border:1px solid transparent}
+.nav a:active{background:var(--panel2);color:var(--ink)}
+
+/* sections */
+section{padding:30px 0 6px}
+.sec-h{display:flex;align-items:baseline;gap:10px;margin-bottom:14px}
+.num{font-family:"Inter Tight";font-weight:800;font-size:13px;color:var(--acc);letter-spacing:.08em}
+section h2{font-size:clamp(22px,6vw,28px);font-weight:700}
+.lede{color:var(--mute);margin:0 0 16px;font-size:15.5px}
+
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:16px 16px 14px;margin-bottom:12px}
+.card h3{font-size:16px;font-weight:700;margin-bottom:6px}
+.card p{margin:0 0 8px;color:var(--ink)}
+.card p:last-child{margin-bottom:0}
+.card .sub{color:var(--mute);font-size:14.5px}
+ul{margin:0;padding-left:0;list-style:none}
+li{position:relative;padding-left:18px;margin:0 0 8px;color:var(--ink)}
+li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;border-radius:50%;background:var(--acc)}
+li.g::before{background:var(--acc2)} li.r::before{background:var(--warn)} li.b::before{background:var(--blue)}
+li small{display:block;color:var(--mute);font-size:14px;margin-top:2px}
+
+/* stat tiles */
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:12px}
+.stat{background:var(--panel2);border:1px solid var(--line);border-radius:14px;padding:14px 14px 12px}
+.stat .v{font-family:"Inter Tight";font-weight:800;font-size:26px;letter-spacing:-.03em;line-height:1}
+.stat .l{font-size:12.5px;color:var(--mute);margin-top:6px;line-height:1.3}
+.stat.hi .v{color:var(--acc)}
+
+/* quote */
+.q{border-left:3px solid var(--acc);padding:6px 0 6px 14px;margin:14px 0;color:var(--ink);font-size:16.5px;line-height:1.45;font-style:italic}
+.q cite{display:block;font-style:normal;font-size:13px;color:var(--mute);margin-top:6px}
+
+/* callout */
+.call{background:linear-gradient(135deg,#1c1a12,#14171c);border:1px solid #3a3320;border-radius:var(--r);padding:16px}
+.call .tag{font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--acc);margin-bottom:6px}
+.call.green{background:linear-gradient(135deg,#0f1f1a,#14171c);border-color:#1f3b31}
+.call.green .tag{color:var(--acc2)}
+
+/* flow */
+.flow{display:flex;flex-direction:column;gap:0;margin:12px 0}
+.step{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start;padding:10px 0}
+.step .dot{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font:700 13px "Inter Tight";background:var(--panel2);border:1px solid var(--line);color:var(--acc)}
+.step b{display:block;font-weight:600}
+.step span{color:var(--mute);font-size:14.5px}
+
+/* questions */
+.qs{counter-reset:q}
+.qs .card{display:grid;grid-template-columns:30px 1fr;gap:12px;align-items:start}
+.qs .card::before{counter-increment:q;content:counter(q);font:800 15px "Inter Tight";color:var(--acc);background:var(--panel2);border:1px solid var(--line);width:30px;height:30px;border-radius:9px;display:grid;place-items:center;margin-top:1px}
+.qs .card h3{font-size:15.5px}
+
+/* split */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.split .card{margin:0}
+.split h3{font-size:14px;text-transform:uppercase;letter-spacing:.08em;color:var(--mute)}
+.split ul li{font-size:15px}
+
+.foot{margin-top:34px;padding-top:16px;border-top:1px solid var(--line);color:var(--dim);font-size:12.5px}
+.foot b{color:var(--mute)}
+@media (min-width:560px){.stats{grid-template-columns:repeat(4,1fr)}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="kicker">Brief for Pat · call prep</div>
+    <h1>Grip Data AI<br>× Thailand</h1>
+    <p>Warren (Exocore / IMUA, w/ Yida Gao) wants to light up Thailand as a robotics-data region and hand us 50% of the revenue for opening the doors.</p>
+    <div class="meta">
+      <span class="chip">Call <b>Sep 8, 2026</b></span>
+      <span class="chip">Source <b>Fieldy · 78 min</b></span>
+      <span class="chip">Next <b>Singapore ~Oct 7</b></span>
+    </div>
+  </div>
+</header>
+
+<nav class="nav"><div class="wrap">
+  <a href="#what">What it is</a><a href="#offer">The offer</a><a href="#gov">Gov angle</a><a href="#raise">The raise</a><a href="#pat">Ask of Pat</a><a href="#qs">Questions</a><a href="#read">My read</a>
+</div></nav>
+
+<main class="wrap">
+
+<section id="what">
+  <div class="sec-h"><span class="num">01</span><h2>What Grip Data does</h2></div>
+  <p class="lede">Robotics training data, collected from real humans doing real work.</p>
+  <div class="stats">
+    <div class="stat hi"><div class="v">50k h</div><div class="l">of video needed per task domain</div></div>
+    <div class="stat"><div class="v">$100M</div><div class="l">ARR at their largest competitor</div></div>
+    <div class="stat"><div class="v">1000s</div><div class="l">workers per facility in China</div></div>
+    <div class="stat"><div class="v">4 × 50–100</div><div class="l">Guatemala pilot: sites × workers</div></div>
+  </div>
+  <div class="card">
+    <h3>The model</h3>
+    <ul>
+      <li>Partner with <b>existing facilities</b> — factories, farms, processors. Workers wear head + wrist cameras and keep doing their normal job.</li>
+      <li>Grip annotates the footage and sells datasets to the big AI / robotics labs. <span class="sub">"We're just a dumb data company — we work with everyone."</span></li>
+      <li>Vertically integrated: facility deals + worker recruiting + quality scoring. Pitches itself as the ground-ops layer — <span class="sub">"the NVIDIA of the robotic side."</span></li>
+      <li>Live in <b>China</b> (their quality benchmark), piloting <b>Guatemala</b>, scaling <b>Argentina</b>. LATAM = geo + skin-tone diversity for the labs.</li>
+      <li class="b">No crypto branding, on purpose. Filecoin for storage, quietly.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Traction as stated</h3>
+    <ul>
+      <li>LOIs with major labs; first LOI → revenue targeted in ~2 weeks (≈ Sep 22).</li>
+      <li>Revenue first, then recruit an academic research co-founder.</li>
+      <li>Met RoboStrategy (King) two weeks ago — wants narrative / opinion-leadership help there.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="offer">
+  <div class="sec-h"><span class="num">02</span><h2>The offer on the table</h2></div>
+  <div class="call">
+    <div class="tag">Verbatim, Warren</div>
+    <div class="q">"We might want to light up Thailand as another region for our data collection… we would basically give you <b>50% of all revenue</b> we generate based on that deal. But you'd have to help us with all the connections… and you'd work out a deal with all those <b>out of your 50%</b>."<cite>Sep 8 · 22:21 UTC</cite></div>
+    <div class="q">"Thailand is probably at least 10 to 20 million a year at scale."<cite>Warren</cite></div>
+  </div>
+  <div class="flow">
+    <div class="step"><div class="dot">1</div><div><b>We open the doors</b><span>Facility owners + political cover in Thailand, via Pat's Bangkok network.</span></div></div>
+    <div class="step"><div class="dot">2</div><div><b>Grip runs the collection</b><span>Cameras, worker onboarding, QA, annotation, lab sales.</span></div></div>
+    <div class="step"><div class="dot">3</div><div><b>50 / 50 on Thai-sourced revenue</b><span>Gross finder's share. Any local partner, fixer, or sub-agent is paid out of our half.</span></div></div>
+  </div>
+  <div class="card">
+    <h3>What he actually needs on the ground</h3>
+    <ul>
+      <li>Large, repetitive-labor workforces. His Thai examples: <b>coconut processing</b> (oil, butter byproducts) and a <b>chicken farm</b> at hundreds-of-thousands scale.</li>
+      <li>Not high-tech manufacturing. Agri, food processing, light assembly — anything where hundreds of people do the same motions all day.</li>
+      <li>"No crypto angle. We'd just partner with existing facilities in Thailand."</li>
+    </ul>
+  </div>
+</section>
+
+<section id="gov">
+  <div class="sec-h"><span class="num">03</span><h2>The government angle</h2></div>
+  <p class="lede">It's a door, not a customer. No grant, no state buyer, no incentive scheme was discussed.</p>
+  <div class="card">
+    <h3>How Warren frames it</h3>
+    <ul>
+      <li><b>China:</b> government stood up purpose-built "robot trainer" facilities, thousands of workers each. That's his gold standard.</li>
+      <li><b>Argentina:</b> scaling through "politically connected billionaire types" who sell it to government as AI-future + local-economy uplift — workers earn a layer on top of existing pay.</li>
+      <li><b>Everyone's racing.</b> "All the governments are racing to get as much data through as possible."</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Why Thailand came up</h3>
+    <p>Warren remembered Jarred's "crypto government" contacts (he first said Philippines; corrected to Thailand). Jarred: <i>"Pat is the one who developed all these relationships — he still lives in Bangkok and maintains them."</i></p>
+  </div>
+  <div class="call green">
+    <div class="tag">What "government" has to deliver</div>
+    <ul>
+      <li class="g"><b>Access to facility owners</b> — CP-Group-tier agri and food conglomerates and their supply chains.</li>
+      <li class="g"><b>Political cover</b> — a foreign company filming Thai workers at scale gets stopped by one mid-level official unless someone senior is sponsoring it.</li>
+      <li class="g"><b>A national-pride story</b> — the Argentina template: local jobs, local AI narrative.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="raise">
+  <div class="sec-h"><span class="num">04</span><h2>The raise</h2></div>
+  <div class="stats">
+    <div class="stat hi"><div class="v">$10M</div><div class="l">round size, opening before Singapore</div></div>
+    <div class="stat"><div class="v">$100M</div><div class="l">target cap</div></div>
+  </div>
+  <div class="card">
+    <ul>
+      <li>Wants a <b>tier-one non-crypto lead</b> for legitimacy with the labs; crypto funds fill the rest. Filecoin investor intros in motion.</li>
+      <li>Plans to use an oversubscribed robotics round as leverage to pull crypto investors into <b>IMUA</b> notes too.</li>
+      <li>Floated Jarred participating in the round, and helping with capital + BizDev on the Korea / Singapore trip.</li>
+      <li class="b">Owes us: company docs, playbook, demo-site link.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="pat">
+  <div class="sec-h"><span class="num">05</span><h2>What I need from Pat</h2></div>
+  <p class="lede">One narrow question decides whether 50% is real money or a mirage.</p>
+  <div class="split">
+    <div class="card">
+      <h3>Reaches owners?</h3>
+      <ul>
+        <li class="g">Agri / food-processing groups</li>
+        <li class="g">Large farms, plants, assembly floors</li>
+        <li class="g">People who can say yes to cameras on their floor</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Reaches officials?</h3>
+      <ul>
+        <li class="b">Ministry / BOI-level sponsor</li>
+        <li class="b">Someone to bless a foreign data op</li>
+        <li class="b">Cover if a local official pushes back</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card" style="margin-top:12px">
+    <h3>Honest framing</h3>
+    <p>If Pat's network is crypto-regulator only, we can offer Warren <b>cover, not facilities</b> — and that's worth less than 50%. If it reaches owners, the deal is real and the number to negotiate is how many sites we have to stand up.</p>
+    <p class="sub">Jarred flagged Thailand as a hard place to operate. Warren's answer: so is China, Guatemala, Korea — everywhere is.</p>
+  </div>
+</section>
+
+<section id="qs">
+  <div class="sec-h"><span class="num">06</span><h2>Questions to nail before Singapore</h2></div>
+  <div class="qs">
+    <div class="card"><div><h3>50% of what, exactly?</h3><p class="sub">Gross data-sale revenue from Thai facilities or margin after facility + worker cost? Term length? Thailand exclusivity?</p></div></div>
+    <div class="card"><div><h3>Who funds facility setup?</h3><p class="sub">Cameras, staffing, QA, local entity — Grip's capex or ours? Per-site economics from Guatemala.</p></div></div>
+    <div class="card"><div><h3>Do the labs want Thailand?</h3><p class="sub">Are the LOIs buying domain coverage or demographic diversity? Does a Thai site fit what's already signed?</p></div></div>
+    <div class="card"><div><h3>Paper or handshake?</h3><p class="sub">Is there a term sheet before Oct 7, or is this a conversation we shape?</p></div></div>
+    <div class="card"><div><h3>What does Pat's network actually deliver?</h3><p class="sub">Owners, officials, or capital. Three different asks; three different values.</p></div></div>
+    <div class="card"><div><h3>Reference-check the claims.</h3><p class="sub">The $100M-ARR competitor and the lab LOIs — before either of us pitches anyone.</p></div></div>
+  </div>
+</section>
+
+<section id="read">
+  <div class="sec-h"><span class="num">07</span><h2>My read</h2></div>
+  <div class="card">
+    <ul>
+      <li class="r"><b>The 50% headline is generous because it's gross-of-nothing.</b> It's a finder's share on revenue that only exists once someone builds, staffs, and runs a facility.</li>
+      <li class="r"><b>The number to extract:</b> what one Guatemala site earns Grip per month. Then "50% of $10–20M at scale" becomes (that × how many Thai sites we can realistically open) ÷ 2, minus what we pay locals.</li>
+      <li class="g"><b>Real asset:</b> if Pat can put Warren in front of two or three large agri / food-processing owners and one senior sponsor, that's a genuine wedge — the same play that's working for Grip in Argentina.</li>
+      <li class="b"><b>Timing:</b> revenue proof lands ≈ Sep 22, round opens before Singapore, we're in Singapore ≈ Oct 7. Pat's answer should be in hand well before that.</li>
+    </ul>
+  </div>
+  <div class="foot">
+    <b>Names:</b> Warren (Exocore / IMUA) · working with Yida Gao · other co-founders Herbie, Tony. Fieldy mis-transcribed Warren as "Ymen" and IMUA as "Emua/MUA" — corrected here.<br>
+    <b>Sources:</b> Fieldy meeting IDs 15b524bd7273c238 (48 min) + 97a51f0321291557 (30 min), Sep 8 2026. Internal prep document.
+  </div>
+</section>
+
+</main>
+</body>
+</html>
